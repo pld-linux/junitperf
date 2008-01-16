@@ -1,5 +1,6 @@
 %include	/usr/lib/rpm/macros.java
 Summary:	JUnit extension for performance and scalability testing
+Summary(pl.UTF-8):	Rozszerzenie JUnita do testowania wydajności i skalowalności
 Name:		junitperf
 Version:	1.9.1
 Release:	0.1
@@ -22,21 +23,34 @@ JUnitPerf is a collection of JUnit test decorators used to measure the
 performance and scalability of functionality contained within existing
 JUnit tests.
 
+%description -l pl.UTF-8
+JUnitPerf to zestaw dekoratorów testów JUnita służący do mierzenia
+wydajności i skalowalności funkcji zawartych w istniejących testach
+JUnita.
+
 %package javadoc
-Summary:	Javadoc for %{name}
+Summary:	Javadoc for JUnitPerf
+Summary(pl.UTF-8):	Dokumentacja Javadoc do pakietu JUnitPerf
 Group:		Documentation
 Requires:	jpackage-utils
 
 %description javadoc
-Javadoc for %{name}.
+Javadoc for JUnitPerf.
+
+%description javadoc -l pl.UTF-8
+Dokumentacja Javadoc do pakietu JUnitPerf.
 
 %package demo
-Summary:	Demos for %{name}
+Summary:	Demos for JUnitPerf
+Summary(pl.UTF-8):	Przykłady użycia pakietu JUnitPerf
 Group:		Development
 Requires:	%{name} = %{version}-%{release}
 
 %description demo
-Demonstrations and samples for %{name}.
+Demonstrations and samples for JUnitPerf.
+
+%description demo -l pl.UTF-8
+Przykłady użycia pakietu JUnitPerf.
 
 %prep
 %setup -q
@@ -72,7 +86,7 @@ ln -nfs %{name}-%{version} %{_javadocdir}/%{name}
 %files
 %defattr(644,root,root,755)
 %doc LICENSE README docs/JUnitPerf.html
-%{_javadir}/*
+%{_javadir}/%{name}*.jar
 
 %files javadoc
 %defattr(644,root,root,755)
