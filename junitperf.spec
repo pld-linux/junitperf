@@ -14,6 +14,7 @@ BuildRequires:	jpackage-utils >= 0:1.6
 BuildRequires:	junit >= 0:3.2
 BuildRequires:	rpm-javaprov
 BuildRequires:	rpmbuild(macros) >= 1.300
+BuildRequires:	unzip
 Requires:	junit >= 0:3.2
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
