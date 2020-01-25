@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.java
 Summary:	JUnit extension for performance and scalability testing
 Summary(pl.UTF-8):	Rozszerzenie JUnita do testowania wydajności i skalowalności
 Name:		junitperf
